@@ -1,0 +1,33 @@
+{
+  "name": "2022-2-vk-edu-fs-frontend-s-felshtyn",
+  "version": "1.0.0",
+  "description": "Fullstack Developer course by VK",
+  "main": "convertBytesToHuman.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imsamaboy/2022-2-VK-EDU-FS-Frontend-S-Felshtyn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Imsamaboy/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/issues"
+  },
+  "homepage": "https://github.com/Imsamaboy/2022-2-VK-EDU-FS-Frontend-S-Felshtyn#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-jest": "^29.0.3",
+    "jest": "^29.0.3"
+  },
+  "scripts": {
+    "test": "../node_modules/.bin/jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  }
+}
