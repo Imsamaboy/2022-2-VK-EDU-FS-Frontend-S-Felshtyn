@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", getMessagesFromLocalStorage.bind(t
 back_button.addEventListener('click', goToChatList.bind(this))
 
 function goToChatList() {
-    window.location.href = '../chatlist.html'
+    window.location.href = './chatlist.html'
 }
 
 function getMessagesFromLocalStorage () {

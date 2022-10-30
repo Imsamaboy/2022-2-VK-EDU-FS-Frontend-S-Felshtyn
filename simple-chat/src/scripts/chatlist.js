@@ -7,7 +7,7 @@ const chat = document.querySelector(".chat")
 chat.addEventListener('click', goToChatPage.bind(this))
 
 function goToChatPage() {
-    window.location.href = '../chatpage.html'
+    window.location.href = './chatpage.html'
 }
 
 function checkOnLastMessage() {
