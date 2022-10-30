@@ -5,6 +5,7 @@
     padding: 20px;
     flex-basis: 90px;
     overflow-y: auto;
+    animation: right-message-scale 0.5s;
 }
 
 .message {
@@ -38,6 +39,18 @@
     color: #8E25AA;
 }
 
+@keyframes message_animation{
+    from {
+        transform: scale(0);
+        transform-origin: bottom right;
+    }
+
+    to {
+        transform: scale(1);
+        transform-origin: bottom right;
+    }
+}
+
 .left {
     height: 60px;
     align-self: flex-start;
@@ -50,4 +63,5 @@
     align-self: flex-end;
     background-color: #F3E5F5;
     border: 1px solid #DCD8DD;
+    animation: message_animation 0.3s;
 }

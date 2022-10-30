@@ -19,5 +19,16 @@ header {
     color: white;
     border: 0;
     flex-basis: 60px;
-    transition: background-color 0.1s, color 0.1s;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-button:hover,
+.search-button:hover {
+    background-color: #ab47b2;
+}
+
+.menu-button:active,
+.search-button:active {
+    background-color: rgb(151, 48, 195);
 }

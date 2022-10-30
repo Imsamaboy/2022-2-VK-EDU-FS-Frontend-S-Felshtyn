@@ -10,6 +10,16 @@
     flex-direction: row;
     color: black;
     background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat:hover {
+    background-color: rgb(221, 208, 208);
+}
+
+.chat:active {
+    background-color: rgb(212, 184, 214);
 }
 
 .chat-image {
