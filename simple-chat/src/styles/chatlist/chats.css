@@ -1,0 +1,62 @@
+.chats-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.chat {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    background-color: white;
+}
+
+.chat-image {
+    display: flex;
+    flex-basis: 85px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.chat-info, .chat-meta {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 1px solid #e7e7e7;
+    gap: 10px;
+}
+
+.chat-info {
+    flex-grow: 1;
+}
+
+.last-message, .last-message-time {
+    color: #787878;
+}
+
+.message-status {
+    color: #8E24AA;
+    align-self: flex-end;
+}
+
+.received-message-status {
+    padding: 2px 0 0 0;
+    height: 25px;
+    width: 30px;
+    background-color: #8E24AA;
+    align-self: flex-end;
+    border-radius: 35%;
+    text-align: center;
+}
+
+.messages-count {
+    color: white;
+    font-size: 14px;
+}

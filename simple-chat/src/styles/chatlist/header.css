@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    height: 90px;
+    background-color: #8E24AA;
+}
+
+.page-title {
+    flex-grow: 1;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.menu-button,
+.search-button {
+    background-color: #8E24AA;
+    color: white;
+    border: 0;
+    flex-basis: 60px;
+    transition: background-color 0.1s, color 0.1s;
+}
