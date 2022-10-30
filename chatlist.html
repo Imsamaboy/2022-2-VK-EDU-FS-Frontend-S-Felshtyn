@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="./styles/chatlist/header.css">
+    <link rel="stylesheet" href="./styles/chatlist/chats.css">
+    <link rel="stylesheet" href="./styles/chatlist/create-chat.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="styles/chatlist.css" rel="stylesheet"></head>
+<body>
+<header>
+    <button class="menu-button" type="">
+        <span class="material-icons">menu</span>
+    </button>
+    <div class="page-title">
+        <span>Messenger</span>
+    </div>
+    <button class="search-button" type="">
+        <span class="material-icons">search</span>
+    </button>
+</header>
+<article class="chat-list">
+    <section class="chat">
+        <div class="chat-image">
+            <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Brad_Pitt_Fury_2014.jpg/800px-Brad_Pitt_Fury_2014.jpg" alt="">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">Brad Pitt</span>
+            <span class="last-message">Dude, you wanna hang out on Broadway?</span>
+        </div>
+        <div class="chat-meta">
+            <span class="last-message-time">4:19</span>
+            <div class="received-message-status">
+                <span class="messages-count">1</span>
+            </div>
+        </div>
+    </section>
+    <section class="chat">
+        <div class="chat-image">
+            <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Leonardo_DiCaprio_2014.jpg" alt="">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">Leo DiCaprio</span>
+            <span class="last-message">Lost the Oscar again...</span>
+        </div>
+        <div class="chat-meta">
+            <span class="last-message-time">10:31</span>
+            <div class="message-status">
+                <span class="material-icons">done_all</span>
+            </div>
+        </div>
+    </section>
+    <section class="chat">
+        <div class="chat-image">
+            <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/2/29/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2825980751148%29_%28cropped%29.jpg" alt="">
+        </div>
+        <div class="chat-info">
+            <span class="chat-name">Margot Robbie</span>
+            <span class="last-message">We can't be friends</span>
+        </div>
+        <div class="chat-meta">
+            <span class="last-message-time">21:00</span>
+            <div class="message-status">
+                <span class="material-icons">done</span>
+            </div>
+        </div>
+    </section>
+</article>
+<button class="create-chat-button">
+    <span class="material-symbols-outlined">add_circle</span>
+<!--    <span class="material-icons">create</span>-->
+</button>
+<script src="./scripts/chatlist.js"></script>
+<script type="text/javascript" src="scripts/chatlist.bundle.js"></script></body>
+</html>

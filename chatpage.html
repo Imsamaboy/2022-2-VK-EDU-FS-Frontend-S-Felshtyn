@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./styles/chatpage/header.css">
+    <link rel="stylesheet" href="./styles/chatpage/chat.css">
+    <link rel="stylesheet" href="./styles/chatpage/form.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+<link href="styles/chatpage.css" rel="stylesheet"></head>
+<body>
+<header>
+    <button class="back-button">
+        <span class="material-icons">arrow_back</span>
+    </button>
+    <div class="profile">
+        <img class="profile-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Brad_Pitt_Fury_2014.jpg/800px-Brad_Pitt_Fury_2014.jpg" alt="" />
+        <div class="profile-info">
+            <span class="name">Brad Pitt</span>
+            <span class="last-seen">was online 3 minutes ago</span>
+        </div>
+    </div>
+    <button class="search-button">
+        <span class="material-icons">search</span>
+    </button>
+    <button class="more-button" type="">
+        <span class="material-icons">more_vert</span>
+    </button>
+</header>
+<div class="chat">
+    <div class="message left">
+        <div class="message-text">Dude, you wanna hang out on Broadway?</div>
+        <div class="message-info">
+            <div class="message-time">4:19</div>
+        </div>
+    </div>
+</div>
+<form class="form" action="/">
+    <input class="form-input" name="message-text" placeholder="Сообщение" type="text">
+    <button class="attachment-button">
+        <span class="material-icons">attachment</span>
+    </button>
+</form>
+<script src="./scripts/chatpage.js"></script>
+<script type="text/javascript" src="scripts/chatpage.bundle.js"></script></body>
+</html>
