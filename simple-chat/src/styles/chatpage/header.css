@@ -11,6 +11,20 @@ header {
     background-color: #8E24AA;
     flex-basis: 80px;
     border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover,
+.search-button:hover,
+.more-button:hover {
+    background-color: #ab47b2;
+}
+
+.back-button:active,
+.search-button:active,
+.more-button:active {
+    background-color: rgb(151, 48, 195);
 }
 
 .profile {
@@ -22,9 +36,10 @@ header {
 }
 
 .profile-image {
-    width: 40px;
+    width: 50px;
     height: 50px;
     border-radius: 45px;
+    cursor: pointer;
 }
 
 .profile-info {
