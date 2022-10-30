@@ -19,18 +19,7 @@ header {
     color: white;
     border: 0;
     flex-basis: 60px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.menu-button:hover,
-.search-button:hover {
-    background-color: #ab47b2;
-}
-
-.menu-button:active,
-.search-button:active {
-    background-color: rgb(151, 48, 195);
+    transition: background-color 0.1s, color 0.1s;
 }
 .chats-list {
     display: flex;
@@ -44,16 +33,6 @@ header {
     flex-direction: row;
     color: black;
     background-color: white;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.chat:hover {
-    background-color: rgb(221, 208, 208);
-}
-
-.chat:active {
-    background-color: rgb(212, 184, 214);
 }
 
 .chat-image {
@@ -111,22 +90,9 @@ header {
     height: 70px;
     border-radius: 50%;
     border: 0;
-    background-color: #f9d667;
+    background-color: #679af9;
     bottom: 25px;
     right: 25px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.create-chat-button:hover {
-    opacity: 0.9;
-    transform: scale(1.1);
-}
-
-.create-chat-button:active {
-    opacity: 1;
-    transform: scale(1);
-    animation: pulse 0.2s 1 ease-out;
 }
 html {
     box-sizing: border-box;
