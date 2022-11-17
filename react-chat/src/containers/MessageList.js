@@ -5,7 +5,7 @@ import {ChatContext} from "../App";
 
 
 export const MessageList = ({chat}) => {
-    const [chatsContext, setChatsContext] = useContext(ChatContext)
+    // const [chatsContext, setChatsContext] = useContext(ChatContext)
 
     useEffect(() => {
         console.log("chatsContext изменился в MessageList")

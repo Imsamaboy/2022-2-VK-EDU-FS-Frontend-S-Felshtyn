@@ -7,14 +7,16 @@ export const PageChatInputForm = ({chat}) => {
     const [text, setText] = useState("")
 
     const updateChatsInLocalStorage = (message, time) => {
-        chatsContext[chat["id"] - 1].messages.push({
+        // Из-за новой ссылки всё пофиксилось :) Контекст не будет менятся пока не поменяется ссылка
+        const newChatsContext = JSON.parse(JSON.stringify(chatsContext))
+        newChatsContext[chat.id - 1].messages.push({
             "id": chat.messages.length + 1,
             "name": "Loveyouzaya",
             "content": message,
             "time": time,
             "type": "right"
         })
-        setChatsContext(chatsContext)
+        setChatsContext(newChatsContext)
         localStorage.setItem("chats", JSON.stringify(chatsContext))
     }
 

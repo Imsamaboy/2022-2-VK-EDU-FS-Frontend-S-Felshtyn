@@ -75,6 +75,7 @@ export const ProfileInfo = styled.div`
 `
 
 export const Chat = styled.div`
+  height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -131,12 +132,15 @@ export const Form = styled.form`
   height: 60px;
   display: flex;
   border: 1px solid rgba(25, 25, 25, 0.32);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `
 
 export const FormInput = styled.input`
   border: 0;
   outline: none;
-  width: calc(100% - 2px);
+  width: calc(100%);
 `
 
 export const AttachmentButton = styled.button`

@@ -48,7 +48,9 @@ export const PageChat = () => {
                     </ProfileInfo>
                 </Profile>
               </PageChatHeader>
-              <Chat><MessageList chat={chat}/></Chat>
+              <Chat>
+                  <MessageList chat={chat}/>
+              </Chat>
               <PageChatInputForm chat={chat}/>
         </>
     )

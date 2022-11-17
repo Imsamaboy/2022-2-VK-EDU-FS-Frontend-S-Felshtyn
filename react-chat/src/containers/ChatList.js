@@ -11,10 +11,7 @@ export const ChatList = () => {
     if (!chatsContext.length) {
         return (
             <ChatWrapper>
-                <h1 className="center"
-                    level="1"
-                    style={{ marginBottom: 0 }}
-                >
+                <h1 style={{ marginBottom: 0 }}>
                     Chat list is empty 😔
                 </h1>
             </ChatWrapper>
