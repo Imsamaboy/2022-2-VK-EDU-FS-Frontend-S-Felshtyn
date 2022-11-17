@@ -1,16 +1,7 @@
 import {MessageInfo, MessageLeft, MessageRight, MessageTime} from "../styles/PageChatStyles";
-import React, {useContext, useEffect} from "react";
-import {useParams} from "react-router-dom";
-import {ChatContext} from "../App";
-
+import React from "react";
 
 export const MessageList = ({chat}) => {
-    // const [chatsContext, setChatsContext] = useContext(ChatContext)
-
-    useEffect(() => {
-        console.log("chatsContext изменился в MessageList")
-    }, [])
-
     const messageText = {
         fontSize: "16px"
     }

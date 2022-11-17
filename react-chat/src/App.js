@@ -55,7 +55,6 @@ let chats = [
 export const ChatContext = createContext(null)
 
 const App = () => {
-    // const [chatsValueContext, setChatsContext] = useState(chats)
     const [chatsValueContext, setChatsValueContext] = useState(JSON.parse(localStorage.getItem("chats")))
 
     useEffect(() => {
