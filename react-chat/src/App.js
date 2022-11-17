@@ -55,7 +55,8 @@ let chats = [
 export const ChatContext = createContext(null)
 
 function App() {
-    const [chatsContext, setChatsContext] = useState(chats)
+    // const [chatsContext, setChatsContext] = useState(chats)
+    const [chatsContext, setChatsContext] = useState(JSON.parse(localStorage.getItem("chats")))
 
     useEffect(() => {
         if (localStorage.chats) {
@@ -63,6 +64,7 @@ function App() {
         } else {
             localStorage.setItem("chats", JSON.stringify(chats));
         }
+        setChatsContext(chatsContext)
     }, [])
 
   return (

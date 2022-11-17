@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {AttachmentButton, Form, FormInput} from "../styles/PageChatStyles";
 import {ChatContext} from "../App";
 
@@ -7,18 +7,21 @@ export const PageChatInputForm = ({chat}) => {
     const [text, setText] = useState("")
 
     const updateChatsInLocalStorage = (message, time) => {
-        chat.messages.push({
-                "id": chat.messages.length + 1,
-                "name": "Loveyouzaya",
-                "content": message,
-                "time": time,
-                "type": "right"
+        chatsContext[chat["id"] - 1].messages.push({
+            "id": chat.messages.length + 1,
+            "name": "Loveyouzaya",
+            "content": message,
+            "time": time,
+            "type": "right"
         })
+        setChatsContext(chatsContext)
         localStorage.setItem("chats", JSON.stringify(chatsContext))
-        setChatsContext()
-        // setChats(JSON.parse(localStorage.getItem("chats")))
-        // chats = JSON.parse(localStorage.getItem("chats"))
     }
+
+    useEffect(() => {
+        console.log("chatsContext изменился в PageChatInput")
+        // setChatsContext(chatsContext)
+    }, [chatsContext])
 
     const handleSubmit = (event) => {
         event.preventDefault()

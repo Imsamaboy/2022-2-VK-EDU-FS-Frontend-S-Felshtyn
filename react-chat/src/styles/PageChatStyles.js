@@ -80,17 +80,7 @@ export const Chat = styled.div`
   flex-grow: 1;
   padding: 20px;
   flex-basis: 90px;
-  overflow-y: auto;
   animation: right-message-scale 0.5s;
-`
-
-export const MessageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  padding: 16px 20px 20px 20px;
-  margin: 8px;
-  word-break: break-word;
 `
 
 export const MessageLeft = styled.div`
@@ -135,18 +125,15 @@ export const MessageTime = styled.div`
 `
 
 export const Form = styled.form`
-  outline: none;
-  width: calc(100% - 2px);
+  flex: 1;
+  font-size: 16px;
+  font-family: "Rubik";
   height: 60px;
   display: flex;
   border: 1px solid rgba(25, 25, 25, 0.32);
 `
 
 export const FormInput = styled.input`
-  flex: 1;
-  font-size: 16px;
-  font-family: "Rubik", serif;
-  padding: 20px;
   border: 0;
   outline: none;
   width: calc(100% - 2px);

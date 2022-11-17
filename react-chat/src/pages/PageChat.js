@@ -31,9 +31,8 @@ export const PageChat = () => {
     let chat = chatsContext.find((chat) => chat.id === parseInt(id))
 
     useEffect(() => {
-        chat = JSON.parse(localStorage.getItem("chats"))
-        setChatsContext()
-    }, [chat])
+        console.log("chatsContext изменился в PageChat")
+    }, [chatsContext])
 
     return (
         <>
@@ -49,11 +48,7 @@ export const PageChat = () => {
                     </ProfileInfo>
                 </Profile>
               </PageChatHeader>
-
-              <Chat>
-                  <MessageList id={id} chat={chat}/>
-              </Chat>
-
+              <Chat><MessageList chat={chat}/></Chat>
               <PageChatInputForm chat={chat}/>
         </>
     )

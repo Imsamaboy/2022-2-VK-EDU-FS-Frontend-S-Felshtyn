@@ -4,15 +4,16 @@ import {useParams} from "react-router-dom";
 import {ChatContext} from "../App";
 
 
-export const MessageList = ({id, chat}) => {
+export const MessageList = ({chat}) => {
+    const [chatsContext, setChatsContext] = useContext(ChatContext)
+
+    useEffect(() => {
+        console.log("chatsContext изменился в MessageList")
+    }, [])
+
     const messageText = {
         fontSize: "16px"
     }
-
-    useEffect(() => {
-        chat = JSON.parse(localStorage.getItem("chats"))[id - 1]
-        console.log(chat)
-    }, [localStorage.chats[id - 1].messages])
 
     return (
         chat.messages.map((message) => {
