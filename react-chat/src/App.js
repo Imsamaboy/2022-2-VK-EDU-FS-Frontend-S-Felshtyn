@@ -64,7 +64,7 @@ const App = () => {
             localStorage.setItem("chats", JSON.stringify(chats));
         }
         setChatsValueContext(chatsValueContext)
-    }, [])
+    }, [chatsValueContext])
 
   return (
     <div className="App">
