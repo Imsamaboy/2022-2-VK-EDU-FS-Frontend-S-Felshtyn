@@ -13,7 +13,7 @@ import {ChatContext} from "../App";
 import {MessageList} from "../containers/MessageList";
 
 export const PageChat = () => {
-    const [chatsContext, setChatsContext] = useContext(ChatContext)
+    const [chatsContext] = useContext(ChatContext)
     const navigate = useNavigate()
     let { id } = useParams()
 
