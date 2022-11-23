@@ -131,6 +131,7 @@ export const MessageTime = styled.div`
 
 export const Form = styled.form`
   flex: 1;
+  position: fixed;
   font-size: 16px;
   font-family: "Rubik";
   height: 60px;
