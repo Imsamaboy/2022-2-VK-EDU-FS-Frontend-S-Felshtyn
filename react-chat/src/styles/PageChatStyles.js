@@ -2,9 +2,12 @@ import styled from 'styled-components'
 
 
 export const PageChatHeader = styled.header`
-    display: flex;
-    height: 90px;
-    background-color: #8E24AA;
+  display: flex;
+  width: 100%;
+  left: 0;
+  justify-content: space-between;;
+  height: 90px;
+  background-color: #8E24AA;
 `
 
 export const BackButton = styled.button`
@@ -75,7 +78,8 @@ export const ProfileInfo = styled.div`
 `
 
 export const Chat = styled.div`
-  height: calc(100% - 60px);
+  height: 100%;
+  position: sticky;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -132,7 +136,6 @@ export const Form = styled.form`
   height: 60px;
   display: flex;
   border: 1px solid rgba(25, 25, 25, 0.32);
-  position: fixed;
   bottom: 0;
   width: 100%;
 `
@@ -140,7 +143,7 @@ export const Form = styled.form`
 export const FormInput = styled.input`
   border: 0;
   outline: none;
-  width: calc(100%);
+  width: 100%;
 `
 
 export const AttachmentButton = styled.button`

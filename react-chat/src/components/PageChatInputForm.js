@@ -1,13 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
 import {AttachmentButton, Form, FormInput} from "../styles/PageChatStyles";
 import {ChatContext} from "../App";
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 
 export const PageChatInputForm = ({chat}) => {
     let [chatsContext, setChatsContext] = useContext(ChatContext)
     const [text, setText] = useState("")
 
     const updateChatsInLocalStorage = (message, time) => {
-        // Из-за новой ссылки всё пофиксилось :) Контекст не будет менятся пока не поменяется ссылка
+        // Из-за новой ссылки всё пофиксилось :)
+        // Контекст не будет менятся пока не поменяется ссылка
         const newChatsContext = JSON.parse(JSON.stringify(chatsContext))
         newChatsContext[chat.id - 1].messages.push({
             "id": chat.messages.length + 1,
@@ -22,7 +24,6 @@ export const PageChatInputForm = ({chat}) => {
 
     useEffect(() => {
         console.log("chatsContext изменился в PageChatInput")
-        // setChatsContext(chatsContext)
     }, [chatsContext])
 
     const handleSubmit = (event) => {
@@ -49,9 +50,7 @@ export const PageChatInputForm = ({chat}) => {
                 type="textarea"
                 onChange={handleChange}
             />
-            <AttachmentButton>
-                <span className="material-icons">attachment</span>
-            </AttachmentButton>
+            <AttachmentButton><AttachFileIcon/></AttachmentButton>
         </Form>
     )
 }
