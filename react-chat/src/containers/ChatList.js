@@ -1,12 +1,11 @@
 import React, {useContext} from "react"
 import {ChatWrapper, ChatInfo, ChatMeta, Chat, ChatImage, ReceivedMessageStatus} from "../styles/PageChatListStyles"
 import {ChatContext} from "../App"
-import {useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 export const ChatList = () => {
     const [chatsContext] = useContext(ChatContext)
-    const navigate = useNavigate()
 
     if (!chatsContext.length) {
         return (
@@ -48,8 +47,9 @@ export const ChatList = () => {
 
     return (
         chatsContext.map((chat) =>
-            <ChatWrapper onClick={() => navigate(`/chat/${chat.id}`)} key={chat.id}>
-                {createChats(chat)}
-            </ChatWrapper>)
+            <Link key={chat.id} style={{textDecoration: 'none'}} to={"/chat/" + chat.id}>
+                     {createChats(chat)}
+             </Link>
+        )
     )
 }

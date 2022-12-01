@@ -1,13 +1,20 @@
 import styled from 'styled-components'
 
 
-export const PageChatHeader = styled.header`
+export const PageChatWrapper = styled.div`
+  background-color: #e6e6e6;
   display: flex;
-  width: 100%;
-  left: 0;
-  justify-content: space-between;;
+  flex-direction: column;
+  font-family: Rubik, sans-serif;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+`
+
+export const PageChatHeader = styled.header`
+  background-color: #8e24aa;
+  display: flex;
   height: 90px;
-  background-color: #8E24AA;
 `
 
 export const BackButton = styled.button`
@@ -57,10 +64,10 @@ export const MoreButton = styled.button`
 
 
 export const Profile = styled.div`
-  display: flex;
-  flex: 1;
   align-items: center;
   column-gap: 20px;
+  display: flex;
+  flex: 1 1;
   margin-left: 30px;
 `
 
@@ -78,13 +85,12 @@ export const ProfileInfo = styled.div`
 `
 
 export const Chat = styled.div`
-  height: 100%;
-  position: sticky;
   display: flex;
+  flex-basis: 90px;
   flex-direction: column;
   flex-grow: 1;
+  overflow-y: auto;
   padding: 20px;
-  flex-basis: 90px;
   animation: right-message-scale 0.5s;
 `
 
@@ -130,21 +136,19 @@ export const MessageTime = styled.div`
 `
 
 export const Form = styled.form`
-  flex: 1;
-  position: fixed;
-  font-size: 16px;
-  font-family: "Rubik";
-  height: 60px;
+  border: 1px solid rgba(25,25,25,.32);
   display: flex;
-  border: 1px solid rgba(25, 25, 25, 0.32);
-  bottom: 0;
-  width: 100%;
+  height: 60px;
 `
 
 export const FormInput = styled.input`
+  flex: 1 1;
+  font-family: Rubik;
+  font-size: 16px;
+  padding: 20px;
   border: 0;
   outline: none;
-  width: 100%;
+  width: calc(100% - 2px);
 `
 
 export const AttachmentButton = styled.button`

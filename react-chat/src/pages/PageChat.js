@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from "react"
-import {Chat} from "../styles/PageChatStyles";
+import {Chat, PageChatWrapper} from "../styles/PageChatStyles";
 import {useParams} from "react-router-dom";
 import {PageChatInputForm} from "../components/PageChatInputForm";
 import {ChatContext} from "../App";
@@ -16,10 +16,10 @@ export const PageChat = () => {
     }, [chatsContext])
 
     return (
-        <>
+        <PageChatWrapper>
             <PageChatHeaderWrapper chat={chat}/>
             <Chat><MessageList chat={chat}/></Chat>
             <PageChatInputForm chat={chat}/>
-        </>
+        </PageChatWrapper>
     )
 }
