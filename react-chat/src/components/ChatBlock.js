@@ -13,7 +13,7 @@ export const ChatBlock = ({chat}) => {
         })
             .then(resp => resp.json())
             .then(data => setLastMessage(data.sort((a, b) => a.send_time - b.send_time).reverse().at(0)))
-    }, [])
+    }, [chat.id])
 
     return (
         <>

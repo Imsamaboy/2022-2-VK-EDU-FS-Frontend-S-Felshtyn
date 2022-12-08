@@ -29,7 +29,7 @@ export const PageChatBody = ({chat}) => {
         })
             .then(resp => resp.json())
             .then(data => setMessages(data.sort((a, b) => a.send_time - b.send_time)))
-    }, [])
+    }, [chat.id])
 
     const createMessages = () => {
         return (
