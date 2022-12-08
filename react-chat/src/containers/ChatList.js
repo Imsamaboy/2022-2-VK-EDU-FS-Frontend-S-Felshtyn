@@ -1,11 +1,27 @@
-import React, {useContext} from "react"
-import {ChatWrapper, ChatInfo, ChatMeta, Chat, ChatImage, ReceivedMessageStatus} from "../styles/PageChatListStyles"
+import React, {useContext, useEffect, useState} from "react"
+import {Chat, ChatImage, ChatWrapper} from "../styles/PageChatListStyles"
 import {ChatContext} from "../App"
 import {Link} from "react-router-dom"
+import {ChatBlock} from "../components/ChatBlock";
 
 
 export const ChatList = () => {
     const [chatsContext] = useContext(ChatContext)
+    const [chats, setChats] = useState([]);
+    const currentUserId = 1
+
+    useEffect(() => {
+        fetch(`api/chats/users/${currentUserId}/`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                "X-CSRFToken": "Osdeegez52LCNUXWMgFyr4MeO56Nb0p8",
+            }
+        })
+            .then(resp => resp.json())
+            .then(data => setChats(data))
+    }, []);
+
 
     if (!chatsContext.length) {
         return (
@@ -17,39 +33,23 @@ export const ChatList = () => {
         )
     }
 
-    const image = {
-        height: "50px",
-        width: "50px",
-        borderRadius: "50%"
+    const createChats = (chat) => {
+        return (
+            <Chat>
+                <ChatImage>
+                    <img style={{height: "50px", width: "50px", borderRadius: "50%"}}
+                         src={"https://cdn.icon-icons.com/icons2/1371/PNG/512/batman_90804.png"} alt={""}/>
+                </ChatImage>
+                <ChatBlock chat={chat}/>
+            </Chat>
+        )
     }
-
-    const lastMessage = {
-        color: "#787878"
-    }
-
-    const createChats = (chat) => (
-        <Chat>
-            <ChatImage>
-                <img style={image} src={`${chat["image"]}`} alt={""}/>
-            </ChatImage>
-            <ChatInfo>
-                <span>{chat["name"]}</span>
-                <span style={lastMessage}>{chat["messages"].at(-1)["content"]}</span>
-            </ChatInfo>
-            <ChatMeta>
-                <span style={lastMessage}>{chat["messages"].at(-1)["time"]}</span>
-                <ReceivedMessageStatus>
-                    <span className="material-icons">done_all</span>
-                </ReceivedMessageStatus>
-            </ChatMeta>
-        </Chat>
-    );
 
     return (
-        chatsContext.map((chat) =>
+        chats.map((chat) =>
             <Link key={chat.id} style={{textDecoration: 'none'}} to={"/chat/" + chat.id}>
-                     {createChats(chat)}
-             </Link>
+                {createChats(chat)}
+            </Link>
         )
     )
 }
