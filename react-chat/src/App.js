@@ -4,6 +4,7 @@ import React, {createContext, useEffect, useState} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {PageChat} from "./pages/PageChat";
 import {PageProfile} from "./pages/PageProfile";
+import {PageGlobalChat} from "./pages/PageGlobalChat";
 
 let chats = [
     {
@@ -88,6 +89,7 @@ const App = () => {
                 <Route path="/" element={<Navigate to={"/chats"}/>}/>
                 <Route path="/chats" element={<PageChatList/>}/>
                 <Route path="/chat/:id" element={<PageChat/>}/>
+                <Route path="/chat/global_chat" element={<PageGlobalChat/>}/>
                 <Route path="/profile/:id" element={<PageProfile/>}/>
             </Routes>
         </ChatContext.Provider>

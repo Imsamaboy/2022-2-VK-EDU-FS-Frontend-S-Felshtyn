@@ -9,7 +9,6 @@ export const PageChatHeaderWrapper = ({chat}) => {
         color: "#CB9CD9",
         fontSize: "13px"
     }
-
     const nameState = {
         color: "white",
         fontSize: "20px",
@@ -24,12 +23,15 @@ export const PageChatHeaderWrapper = ({chat}) => {
                 </BackButton>
             </Link>
             <Profile>
-                <Link to={"/profile/" + chat.id}>
-                    <ProfileImage src={chat.image} alt=""/>
-                </Link>
+                {chat.users.length === 2 ?
+                    <Link to={`/profile/${chat.id}&${chat.users.find(user => user !== 1)}`}>
+                    <ProfileImage src={"https://cdn.icon-icons.com/icons2/1371/PNG/512/batman_90804.png"} alt=""/>
+                    </Link> :
+                    <ProfileImage src={"https://cdn.icon-icons.com/icons2/1371/PNG/512/batman_90804.png"} alt=""/>
+                }
                 <ProfileInfo>
-                    <span style={nameState}>{chat.name}</span>
-                    <span style={lastSeen}>{chat.online}</span>
+                    <span style={nameState}>{chat.chat_name}</span>
+                    <span style={lastSeen}>3 minuties ago</span>
                 </ProfileInfo>
             </Profile>
         </PageChatHeader>
