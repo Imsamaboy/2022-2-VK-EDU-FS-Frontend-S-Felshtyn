@@ -166,3 +166,41 @@ export const AttachmentButton = styled.button`
     color: #aa00ff;
   }
 `
+
+export const SendButton = styled.button`
+  color: white;
+  background-color: #8E24AA;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  padding: 3px 6px 6px 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #ab47b2;
+  }
+  
+  &:active {
+    background-color: rgb(151, 48, 195);
+  }
+`
+
+export const DiscardAudioButton = styled.button`
+  color: white;
+  background-color: #8E24AA;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  padding: 3px 6px 6px 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #ab47b2;
+  }
+
+  &:active {
+    background-color: rgb(151, 48, 195);
+  }
+`
