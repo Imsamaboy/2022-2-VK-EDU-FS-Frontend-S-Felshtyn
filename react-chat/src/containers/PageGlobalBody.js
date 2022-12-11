@@ -21,10 +21,19 @@ import {
     LocationButton
 } from "../styles/PageChatButtonsStyles"
 import {Attachment} from "@mui/icons-material"
+import {getMessagesAction, renderNewMessageAction} from "../actions/MessageAction";
+import {connect, useSelector} from "react-redux";
 
 
 export const PageGlobalBody = () => {
     const [messages, setMessages] = useState([])
+
+    const chat = useSelector((state) => state.ChatReducer)
+
+    useEffect(() => {
+        getMessagesAction()
+    }, [chat])
+
     const [text, setText] = useState("")
     const author = "Felshtyn Stanislav"
     const [file, setFile] = useState([])
@@ -262,3 +271,9 @@ export const PageGlobalBody = () => {
         </>
     )
 }
+
+const mapStateToProps = (state) => ({
+    messages: state.messagereducer.messages,
+})
+
+export default connect(mapStateToProps, {getMessagesAction, renderNewMessageAction})(PageGlobalBody)
