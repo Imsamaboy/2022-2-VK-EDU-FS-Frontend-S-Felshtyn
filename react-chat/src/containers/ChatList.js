@@ -24,9 +24,9 @@ export const ChatList = () => {
     if (!chats.length) {
         return (
             <ChatWrapper>
-                <h1 style={{ marginBottom: 0 }}>
-                    Chat list is empty 😔
-                </h1>
+                {/*<h1 style={{ marginBottom: 0 }}>*/}
+                {/*    Chat list is empty 😔*/}
+                {/*</h1>*/}
             </ChatWrapper>
         )
     }
