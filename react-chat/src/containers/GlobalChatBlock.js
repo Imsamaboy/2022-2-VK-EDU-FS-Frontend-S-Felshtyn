@@ -1,5 +1,5 @@
-import {ChatInfo, ChatMeta, ReceivedMessageStatus} from "../styles/PageChatListStyles";
-import React, {useEffect, useState} from "react";
+import {ChatInfo, ChatMeta, ReceivedMessageStatus} from "../styles/PageChatListStyles"
+import React, {useEffect, useState} from "react"
 
 export const GlobalChatBlock = () => {
     const [lastMessageChannel, setLastMessageChannel] = useState("")

@@ -1,13 +1,11 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {Chat, ChatImage, ChatWrapper} from "../styles/PageChatListStyles"
-import {ChatContext} from "../App"
 import {Link} from "react-router-dom"
-import {ChatBlock} from "../components/ChatBlock";
+import {ChatBlock} from "../components/ChatBlock"
 
 
 export const ChatList = () => {
-    const [chatsContext] = useContext(ChatContext)
-    const [chats, setChats] = useState([]);
+    const [chats, setChats] = useState([])
     const currentUserId = 1
 
     useEffect(() => {
@@ -20,15 +18,15 @@ export const ChatList = () => {
         })
             .then(resp => resp.json())
             .then(data => setChats(data))
-    }, []);
+    }, [])
 
 
-    if (!chatsContext.length) {
+    if (!chats.length) {
         return (
             <ChatWrapper>
-                <h1 style={{ marginBottom: 0 }}>
-                    Chat list is empty 😔
-                </h1>
+                {/*<h1 style={{ marginBottom: 0 }}>*/}
+                {/*    Chat list is empty 😔*/}
+                {/*</h1>*/}
             </ChatWrapper>
         )
     }
