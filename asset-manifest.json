@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa5a5fa7.css",
-    "main.js": "/static/js/main.1b43a9ec.js",
-    "static/js/787.b5aa3df0.chunk.js": "/static/js/787.b5aa3df0.chunk.js",
-    "index.html": "/index.html",
-    "main.aa5a5fa7.css.map": "/static/css/main.aa5a5fa7.css.map",
-    "main.1b43a9ec.js.map": "/static/js/main.1b43a9ec.js.map",
-    "787.b5aa3df0.chunk.js.map": "/static/js/787.b5aa3df0.chunk.js.map"
+    "main.css": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.aa5a5fa7.css",
+    "main.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.33cfc787.js",
+    "static/js/787.b5aa3df0.chunk.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.b5aa3df0.chunk.js",
+    "index.html": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/index.html",
+    "main.aa5a5fa7.css.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.aa5a5fa7.css.map",
+    "main.33cfc787.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.33cfc787.js.map",
+    "787.b5aa3df0.chunk.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.b5aa3df0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5a5fa7.css",
-    "static/js/main.1b43a9ec.js"
+    "static/js/main.33cfc787.js"
   ]
 }
