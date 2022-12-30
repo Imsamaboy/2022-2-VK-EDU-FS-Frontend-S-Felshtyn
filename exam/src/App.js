@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
+import {PageTranslate} from "./pages/PageTranslate";
+import {PageTranslateHistory} from "./pages/PageTranslateHistory";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className="App">
+        <Routes>
+            <Route path="/" element={<Navigate to={"/translate"}/>}/>
+            <Route path='/translate' element={<PageTranslate/>}/>
+            <Route path='/history' element={<PageTranslateHistory/>}/>
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }
 
