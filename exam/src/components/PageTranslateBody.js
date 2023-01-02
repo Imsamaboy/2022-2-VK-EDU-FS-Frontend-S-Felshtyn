@@ -15,7 +15,8 @@ import {
 
 export const PageTranslateBody = ({props}) => {
     const [text, setText] = useState("")
-    const [selectedLanguage, setSelectedLanguage] = useState("af")
+    const [selectedToLanguage, setSelectedToLanguage] = useState("af")
+    const [selectedFromLanguage, setSelectedFromLanguage] = useState("af")
     const [translatedText, setTranslatedText] = useState("Translation")
     const languages = props.languages
 
@@ -27,8 +28,12 @@ export const PageTranslateBody = ({props}) => {
         setText(event.target.value)
     }
 
-    const handleLanguageChange = (event) => {
-        setSelectedLanguage(event.target.value)
+    const handleFromLanguageChange = (event) => {
+        setSelectedFromLanguage(event.target.value)
+    }
+
+    const handleToLanguageChange = (event) => {
+        setSelectedToLanguage(event.target.value)
     }
 
     const handleSubmit = (event) => {
@@ -48,7 +53,8 @@ export const PageTranslateBody = ({props}) => {
             },
             body: `[{ "Text": "${text}" }]`
         }
-        fetch(`https://microsoft-translator-text.p.rapidapi.com/translate?to%5B0%5D=${selectedLanguage}&api-version=3.0&profanityAction=NoAction&textType=plain`, options)
+
+        fetch(`https://microsoft-translator-text.p.rapidapi.com/translate?to%5B0%5D=${selectedToLanguage}&api-version=3.0&from=${selectedFromLanguage}&profanityAction=NoAction&textType=plain`, options)
             .then(response => response.json())
             .then(response => {
                 const result = response[0].translations[0].text
@@ -60,7 +66,8 @@ export const PageTranslateBody = ({props}) => {
                 history.push({
                     text: text,
                     translatedText: result,
-                    language: languages.find((element) => element.key === selectedLanguage).name
+                    toLanguage: languages.find((element) => element.key === selectedToLanguage).name,
+                    fromLanguage: languages.find((element) => element.key === selectedFromLanguage).name
                 })
                 localStorage.setItem("translateHistory", JSON.stringify(history))
             })
@@ -70,7 +77,29 @@ export const PageTranslateBody = ({props}) => {
     return (
         <TranslateBody>
             <TranslateBodyHeader>
-                <TranslateBodyLanguage style={{color: "black"}}>Language Autodetect</TranslateBodyLanguage>
+                <TranslateBodyLanguage>
+                    <span
+                        style={{
+                            display: "inline-block",
+                            margin: "10px",
+                            position: "relative",
+                            verticalAlign: "middle"
+                        }}
+                        onChange={handleFromLanguageChange}
+                    >
+                        <TranslateBodySelectLanguage>
+                            {
+                                languages
+                                &&
+                                languages.map((item, index) =>
+                                    <option value={item.key} key={index}>
+                                        { item.name + ' (' + item.nativeName + ')' }
+                                    </option>
+                                )
+                            }
+                        </TranslateBodySelectLanguage>
+                    </span>
+                </TranslateBodyLanguage>
                 <TranslateBodySwapButton><SwapHoriz/></TranslateBodySwapButton>
                 <TranslateBodyLanguage>
                     <span
@@ -80,7 +109,7 @@ export const PageTranslateBody = ({props}) => {
                             position: "relative",
                             verticalAlign: "middle"
                         }}
-                        onChange={handleLanguageChange}
+                        onChange={handleToLanguageChange}
                     >
                         <TranslateBodySelectLanguage>
                             {

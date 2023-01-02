@@ -27,11 +27,11 @@ export const PageTranslateHistoryBody = () => {
                     }
                 }>
                     <FromLanguage>
-                        Your language 😊
+                        {translate.fromLanguage}
                     </FromLanguage>
                     <ArrowRightAltIcon style={{color: "black"}}/>
                     <ToLanguage>
-                        {translate.language}
+                        {translate.toLanguage}
                     </ToLanguage>
                 </div>
 
