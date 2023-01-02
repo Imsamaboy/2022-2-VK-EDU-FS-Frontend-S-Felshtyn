@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.93557c8a.css",
-    "main.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.997a9829.js",
-    "static/js/787.890e5f70.chunk.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.890e5f70.chunk.js",
+    "main.css": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.aa5a5fa7.css",
+    "main.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.f3d39e3f.js",
+    "static/js/787.b5aa3df0.chunk.js": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.b5aa3df0.chunk.js",
     "index.html": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/index.html",
-    "main.93557c8a.css.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.93557c8a.css.map",
-    "main.997a9829.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.997a9829.js.map",
-    "787.890e5f70.chunk.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.890e5f70.chunk.js.map"
+    "main.aa5a5fa7.css.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/css/main.aa5a5fa7.css.map",
+    "main.f3d39e3f.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/main.f3d39e3f.js.map",
+    "787.b5aa3df0.chunk.js.map": "/2022-2-VK-EDU-FS-Frontend-S-Felshtyn/static/js/787.b5aa3df0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93557c8a.css",
-    "static/js/main.997a9829.js"
+    "static/css/main.aa5a5fa7.css",
+    "static/js/main.f3d39e3f.js"
   ]
 }
