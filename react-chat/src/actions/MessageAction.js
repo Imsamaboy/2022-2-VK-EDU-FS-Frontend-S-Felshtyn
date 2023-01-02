@@ -16,27 +16,27 @@ const getMessagesFailure = (error) => ({
     },
 })
 
-const addNewMessage = (message) => ({
+const sendMessage = (message) => ({
     type: ADD_NEW_MESSAGE,
     payload: message,
 })
 
 
-export const getMessagesAction = () => {
+export const getMessages = () => {
     return (dispatch, getState) => {
         console.log("state: ", getState());
         const pollItems = () => {
             fetch(`https://tt-front.vercel.app/messages`)
                 .then((resp) => resp.json())
                 .then((data) => dispatch(getMessagesSuccess(data)))
+                .catch(error => dispatch(getMessagesFailure(error.message)))
         }
         setInterval(() => pollItems(), 1000)
-        return
     }
 }
 
-export const newMessageAction = (message) => {
-    return (dispatch, getState) => {
+export const sendMessageAction = (message) => {
+    return (dispatch) => {
         fetch(`https://tt-front.vercel.app/message`, {
             method: "POST",
             headers: {
@@ -44,12 +44,6 @@ export const newMessageAction = (message) => {
             },
             body: JSON.stringify(message),
         })
-        return
-    }
-}
-
-export const renderNewMessageAction = (message) => {
-    return (dispatch, getState) => {
-        dispatch(addNewMessage(message))
+        .then(dispatch(sendMessage(message)))
     }
 }

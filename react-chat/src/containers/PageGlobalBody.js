@@ -21,17 +21,15 @@ import {
     LocationButton
 } from "../styles/PageChatButtonsStyles"
 import {Attachment} from "@mui/icons-material"
-import {getMessagesAction, renderNewMessageAction} from "../actions/MessageAction";
-import {connect, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 
 export const PageGlobalBody = () => {
     const [messages, setMessages] = useState([])
-
     const chat = useSelector((state) => state.ChatReducer)
 
     useEffect(() => {
-        getMessagesAction()
+        getMessages()
     }, [chat])
 
     const [text, setText] = useState("")
@@ -189,10 +187,10 @@ export const PageGlobalBody = () => {
 
     const createMessages = () => {
         return (
-            messages.map((message) => {
+            messages.map((message, index) => {
                 if (message.author !== author) {
                     return (
-                        <MessageLeft>
+                        <MessageLeft key={index}>
                             <div style={messageText}>{message.text}</div>
                             <MessageInfo>
                                 <MessageTime>{
@@ -204,7 +202,7 @@ export const PageGlobalBody = () => {
                     )
                 } else {
                     return (
-                        <MessageRight>
+                        <MessageRight key={index}>
                             <div style={messageText}>{message.text}</div>
                             <MessageInfo>
                                 <MessageTime>{
@@ -271,9 +269,3 @@ export const PageGlobalBody = () => {
         </>
     )
 }
-
-const mapStateToProps = (state) => ({
-    messages: state.messagereducer.messages,
-})
-
-export default connect(mapStateToProps, {getMessagesAction, renderNewMessageAction})(PageGlobalBody)
